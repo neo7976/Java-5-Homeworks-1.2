@@ -4,14 +4,13 @@ import java.time.format.DateTimeFormatter;
 public class Logger {
     protected DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
     protected int num = 1;
-
-    public void log(String msg) {
-        System.out.printf("[Date: %s %3d] -> %s\n", dtf.format(LocalDateTime.now()), num++, msg);
-    }
-
     private static Logger instance = null;
 
     private Logger() {
+    }
+
+    public void log(String msg) {
+        System.out.printf("[Date: %s %3d] -> %s\n", dtf.format(LocalDateTime.now()), num++, msg);
     }
 
     public static Logger getInstance() {
