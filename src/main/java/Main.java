@@ -23,5 +23,9 @@ public class Main {
 
         logger.log("Просим пользователя ввести входные данные для фильтрации\nВведите порог для фильтра: ");
         int filterValue = Integer.parseInt(scanner.nextLine());
+
+        Filter filter = new Filter(filterValue);
+        filter.filterOut(list);
+        logger.log("Завершаем программу");
     }
 }
