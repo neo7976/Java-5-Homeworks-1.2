@@ -6,7 +6,7 @@ public class Logger {
     protected int num = 1;
 
     public void log(String msg) {
-        System.out.printf("[Date: %-30s %d] %s\n", dtf.format(LocalDateTime.now()),num++, msg);
+        System.out.printf("[Date: %s %3d] -> %s\n", dtf.format(LocalDateTime.now()), num++, msg);
     }
 
     private static Logger instance = null;
